@@ -1,4 +1,4 @@
-name: nyu_hpc_310
+name: nyu_hpc_py310
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/nyu_hpc_310
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/nyu_hpc_py310
           tags: |
             1.0.${{ github.run_number }}
             type=ref,event=tag
